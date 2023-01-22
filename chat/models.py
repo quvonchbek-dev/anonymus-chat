@@ -10,12 +10,12 @@ class Message(models.Model):
     def __str__(self):
         return self.body
 
-    def src(self):
+    def as_p(self):
         soup = BeautifulSoup(str(self.body), "html.parser")
         img = soup.find("img")
         if img:
-            return img['src']
-        return ""
+            return "<a href = \"" + img['src'] + "\">" + self.body +"</a>"
+        return self.body
     def save(self, *args, **kwargs):
         m = re.search(r"style=\"+.{1,}\"", self.body)
         if m:

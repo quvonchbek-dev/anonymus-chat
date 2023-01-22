@@ -1,5 +1,5 @@
 .message {
-    border: 5px outset #3861e9;
+    border: 3px outset #61afef;
     background-color: lightblue;
     text-align: center;
     max-width: 60%;
@@ -7,10 +7,11 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    border-radius: 20px;
 }
 
 .chat {
-    background-color: rgb(0, 0, 0);
+    background-color: #5c6370;
     width: 100%;
     align-items: center;
     

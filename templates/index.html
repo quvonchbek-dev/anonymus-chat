@@ -3,7 +3,8 @@
 <div class="chat">
 {% for message in data %}
     <div class="message">
-    <a href = {{ message.src }}>{{ message.body | safe }}</a>
+        {% if message.img %}{% endif %}
+        {{ message.as_p | safe }}
     {{ message.created_at }}
     </div>
 {% endfor %} 
