@@ -16,9 +16,12 @@ class Message(models.Model):
         if img:
             return "<a href = \"" + img['src'] + "\">" + self.body +"</a>"
         return self.body
+    def get_time(self):
+        return "<h6 class=\"time\">" + f"{self.created_at.strftime('%H:%M')} </h6>"
+    
     def save(self, *args, **kwargs):
         m = re.search(r"style=\"+.{1,}\"", self.body)
         if m:
             self.body = self.body.replace(m.group(0), "")
-
+        self.created_at = datetime.now()
         super().save(*args, **kwargs)

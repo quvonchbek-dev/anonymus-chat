@@ -3,20 +3,17 @@
 <div class="chat">
 {% for message in data %}
     <div class="message">
-        {% if message.img %}{% endif %}
         {{ message.as_p | safe }}
-    {{ message.created_at }}
+        {{ message.get_time | safe }}
     </div>
-{% endfor %} 
+{% endfor %}
+
 <form method="post">
-            {% csrf_token %}
-            <div class="form-outline">
-                {{ form.body }}
-                <br />
-            </div>
-            <!--Blog Text Area-->
-            {{form.media}}
-            <input type="submit" />
-        </form>
-{% endblock %}
+    {% csrf_token %}
+    <div class="form-outline">
+        {{ form.body }}
+        {{ form.media }}
     </div>
+    <button class="button" type="submit">Send</button>
+</form>
+{% endblock %}
