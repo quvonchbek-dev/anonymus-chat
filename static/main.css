@@ -2,7 +2,7 @@
     border: 3px outset #61afef;
     background-color: lightblue;
     /* text-align: auto; */
-    max-width: 60%;
+    max-width: 80%;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -11,14 +11,16 @@
 }
 
 .chat {
+    padding-top: 10px;
     background-color: #5c6370;
     width: 100%;
     align-items: center;
+    min-width: 400px;
     
 }
 
 img {
-    width: 40%;
+    width: 50%;
 }
 body {
     text-align: center;

@@ -1,11 +1,14 @@
 {% extends "base.html" %} {% block title %}{{ section.title }}{% endblock %} {% block content %}
-<h1>{{ section.title }}</h1>
 <div class="chat">
 {% for message in data %}
     <div class="message">
         {{ message.as_p | safe }}
         {{ message.get_time | safe }}
     </div>
+    <form action="/delete/{{ message.id }}/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
 {% endfor %}
 
 <form method="post">
