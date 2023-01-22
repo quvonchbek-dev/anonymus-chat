@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for message in data %}
+        <article class="message">
+            <time class="date">
+                {{ message.created_at }}
+            </time>
+            <h2><a href="">{{ message }}</a></h2>
+        </article>
+    {% endfor %}
+{% endblock %}

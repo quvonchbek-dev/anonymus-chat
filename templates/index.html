@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}{{ section.title }}{% endblock %} {% block content %}
+<h1>{{ section.title }}</h1>
+<div class="chat">
+{% for message in data %}
+    <div class="message">
+    <a href = {{ message.src }}>{{ message.body | safe }}</a>
+    {{ message.created_at }}
+    </div>
+{% endfor %} 
+<form method="post">
+            {% csrf_token %}
+            <div class="form-outline">
+                {{ form.body }}
+                <br />
+            </div>
+            <!--Blog Text Area-->
+            {{form.media}}
+            <input type="submit" />
+        </form>
+{% endblock %}
+    </div>
