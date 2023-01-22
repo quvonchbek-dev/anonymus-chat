@@ -1,17 +1,22 @@
-{% extends "base.html" %} {% block title %}{{ section.title }}{% endblock %} {% block content %}
+{% extends "base.html" %} {% load static %} {% block title %}{{ section.title }}{% endblock %} {% block content %}
+<h2 align="center">ANONYMUS CHAT</h2>
 <div class="chat">
-{% for message in data %}
-    <div class="message">
-        {{ message.as_p | safe }}
-        {{ message.get_time | safe }}
-    </div>
-    <form action="/delete/{{ message.id }}/" method="post">
-        {% csrf_token %}
-        <input type="submit" value="Delete">
-    </form>
-{% endfor %}
+    {% for message in messages %}
+        <div class="container">    
+            <div class="message">
+                {{ message.as_p | safe }}
+                {{ message.get_time | safe }}
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="id" value={{ message.id }}>
+                <button class="delete-btn" type="submit"><img src="{% static '/img/delete.jpg' %}"></button>
+            </form>
+        </div>
+    {% endfor %}
+</div>
 
-<form method="post">
+<form method="post" align="center">
     {% csrf_token %}
     <div class="form-outline">
         {{ form.body }}
@@ -19,4 +24,5 @@
     </div>
     <button class="button" type="submit">Send</button>
 </form>
+
 {% endblock %}

@@ -2,28 +2,26 @@
     border: 3px outset #61afef;
     background-color: lightblue;
     /* text-align: auto; */
-    max-width: 80%;
+    width: 90%;
     margin-bottom: 20px;
     margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
+    margin-right: none;
+    margin-bottom: 5px;
     border-radius: 20px;
+    padding: 10px;
 }
 
 .chat {
     padding-top: 10px;
-    background-color: #5c6370;
+    background-color: #ffffff;
     width: 100%;
     align-items: center;
     min-width: 400px;
-    
+    align-content: self;
 }
 
 img {
-    width: 50%;
-}
-body {
-    text-align: center;
+    width: 80%;
 }
 
 .time {
@@ -31,14 +29,26 @@ body {
     margin-right: 20px;
 }
 
-.django-ckeditor-widget {
-    height: 20px;
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
 }
 
-
-html,
-body {
+html {
     height: 100%;
+    
+}
+
+.delete-btn {
+    align-items: bottom;
+    width:80px;
+    /* zoom: 220%; */
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    text-align: left;
 }
 
 .wrap {
@@ -69,6 +79,7 @@ body {
     padding: 10px;
     margin-bottom: 20px;
 }
+
 /* 
 button::before {
     content: '';
