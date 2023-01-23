@@ -13,7 +13,7 @@ SECRET_KEY = "j)k4_c#&ue8e(e7^9+j)_x4vc5y)z+#tlai$sfzaje=gbcw1ma"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["quvonchbek.uz"]
 
 
 # Application definition
