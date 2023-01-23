@@ -1,10 +1,17 @@
 {% extends "base.html" %} {% load static %} {% block title %}{{ section.title }}{% endblock %} {% block content %}
 <h2 align="center">ANONYMUS CHAT</h2>
 <div class="chat">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-outline">
+            {{ form.body }}
+            <button class="button" type="submit">Send</button>
+        </div>
+    </form>
     {% for message in messages %}
         <div class="container">    
             <div class="message">
-                {{ message.as_p | safe }}
+                {{ message.body.html | safe }}
                 {{ message.get_time | safe }}
             </div>
             <form method="post">
@@ -15,14 +22,5 @@
         </div>
     {% endfor %}
 </div>
-
-<form method="post" align="center">
-    {% csrf_token %}
-    <div class="form-outline">
-        {{ form.body }}
-        {{ form.media }}
-    </div>
-    <button class="button" type="submit">Send</button>
-</form>
 
 {% endblock %}

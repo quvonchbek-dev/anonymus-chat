@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "chat",
     "ckeditor",
-    "ckeditor_uploader",
+    "django_quill",
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
@@ -110,153 +110,33 @@ TIME_ZONE = "Asia/Tashkent"
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "static"),
+    
 ]
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = "media/"
+MEDIA_FILES_DIRS = [
+    os.path.join(BASE_DIR, "media"),
+]
 
-
-# CKEDITOR_CONFIGS = {
-#     "default": {
-#         "toolbar_Custom": [
-#             {
-#                 "name": "document",
-#                 "items": [
-#                     "Source",
-#                     "-",
-#                     "Save",
-#                     "NewPage",
-#                     "Preview",
-#                     "Print",
-#                     "-",
-#                     "Templates",
-#                 ],
-#             },
-#             {
-#                 "name": "clipboard",
-#                 "items": [
-#                     "Cut",
-#                     "Copy",
-#                     "Paste",
-#                     "PasteText",
-#                     "PasteFromWord",
-#                     "-",
-#                     "Undo",
-#                     "Redo",
-#                 ],
-#             },
-#             {"name": "editing", "items": ["Find", "Replace", "-", "SelectAll"]},
-#             {
-#                 "name": "forms",
-#                 "items": [
-#                     "Form",
-#                     "Checkbox",
-#                     "Radio",
-#                     "TextField",
-#                     "Textarea",
-#                     "Select",
-#                     "Button",
-#                     "ImageButton",
-#                     "HiddenField",
-#                 ],
-#             },
-#             "/",
-#             {
-#                 "name": "basicstyles",
-#                 "items": [
-#                     "Bold",
-#                     "Italic",
-#                     "Underline",
-#                     "Strike",
-#                     "Subscript",
-#                     "Superscript",
-#                     "-",
-#                     "RemoveFormat",
-#                 ],
-#             },
-#             {
-#                 "name": "paragraph",
-#                 "items": [
-#                     "NumberedList",
-#                     "BulletedList",
-#                     "-",
-#                     "Outdent",
-#                     "Indent",
-#                     "-",
-#                     "Blockquote",
-#                     "CreateDiv",
-#                     "-",
-#                     "JustifyLeft",
-#                     "JustifyCenter",
-#                     "JustifyRight",
-#                     "JustifyBlock",
-#                     "-",
-#                     "BidiLtr",
-#                     "BidiRtl",
-#                     "Language",
-#                 ],
-#             },
-#             {"name": "links", "items": ["Link", "Unlink", "Anchor"]},
-#             {
-#                 "name": "insert",
-#                 "items": [
-#                     "Image",
-#                     "Youtube",
-#                     "Flash",
-#                     "Table",
-#                     "HorizontalRule",
-#                     "Smiley",
-#                     "SpecialChar",
-#                     "PageBreak",
-#                     "Iframe",
-#                 ],
-#             },
-#             "/",
-#             {"name": "styles", "items": ["Styles", "Format", "Font", "FontSize"]},
-#             {"name": "colors", "items": ["TextColor", "BGColor"]},
-#             {"name": "tools", "items": ["Maximize", "ShowBlocks"]},
-#             {"name": "about", "items": ["CodeSnippet"]},
-#             {"name": "about", "items": ["About"]},
-#             "/",  # put this to force next toolbar on new line
-#             {
-#                 "name": "yourcustomtools",
-#                 "items": [
-#                     # put the name of your editor.ui.addButton here
-#                     "Preview",
-#                     "Maximize",
-#                 ],
-#             },
-#         ],
-#         "toolbar": "Custom",  # put selected toolbar config here
-#         "toolbarGroups": [
-#             {"name": "document", "groups": ["mode", "document", "doctools"]}
-#         ],
-#         'width': '50%',
-#         "height": "50%",
-#         "filebrowserWindowHeight": 725,
-#         "filebrowserWindowWidth": 940,
-#         "toolbarCanCollapse": True,
-#         "mathJaxLib": "//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML",
-#         "tabSpaces": 4,
-#         "extraPlugins": ",".join(
-#             [
-#                 "uploadimage",  # the upload image feature
-#                 # your extra plugins here
-#                 "div",
-#                 "autolink",
-#                 "autoembed",
-#                 "embedsemantic",
-#                 "autogrow",
-#                 "devtools",
-#                 "widget",
-#                 "lineutils",
-#                 "clipboard",
-#                 "dialog",
-#                 "dialogui",
-#                 "elementspath",
-#                 "codesnippet",
-#             ]
-#         ),
-#     }
-# }
+QUILL_CONFIGS = {
+    'default':{
+        'theme': 'snow',
+        'modules': {
+            'syntax': True,
+            'toolbar': [
+                [
+                    {'font': []},
+                    {'header': ["header"]},
+                    {'align': []},
+                    'bold', 'italic', 'underline', 'strike', 'blockquote',
+                    {'color': ["red"]},
+                    {'background': []},
+                ],
+                ['code-block', 'link'],
+                ['clean'],
+            ]
+        }
+    }
+}

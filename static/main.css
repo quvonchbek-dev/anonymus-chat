@@ -1,7 +1,7 @@
 .message {
-    border: 3px outset #61afef;
-    background-color: lightblue;
-    /* text-align: auto; */
+    /* border: 3px outset #61afef; */
+    background: #bee9e5;
+    /* background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%); */
     width: 90%;
     margin-bottom: 20px;
     margin-left: auto;
@@ -9,6 +9,22 @@
     margin-bottom: 5px;
     border-radius: 20px;
     padding: 10px;
+}
+
+.ql-editor {
+    max-width: 80%;
+}
+
+.form-outline {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    max-height: 100px;
+    margin-bottom: 10px;
+    padding: 5px;
+
+    /* background-color: red; */
 }
 
 .chat {
@@ -39,12 +55,12 @@ img {
 
 html {
     height: 100%;
-    
+
 }
 
 .delete-btn {
     align-items: bottom;
-    width:80px;
+    width: 80px;
     /* zoom: 220%; */
     background: rgba(0, 0, 0, 0);
     border: none;
@@ -58,7 +74,7 @@ html {
     justify-content: center;
 }
 
-.button {
+.buttono {
     min-width: 300px;
     min-height: 60px;
     font-family: 'Nunito', sans-serif;
