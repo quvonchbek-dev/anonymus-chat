@@ -10,7 +10,7 @@
             <form method="post">
                 {% csrf_token %}
                 <input type="hidden" name="id" value={{ message.id }}>
-                <button class="btn" type="submit"><img class="delete-btn" src="{% static '/img/delete.jpg' %}"></button>
+                <input class="delete-btn" type="image" src="{% static '/img/delete.png' %}"/>
             </form>
         </div>
     {% endfor %}
@@ -19,7 +19,8 @@
             {% csrf_token %}
             <div class="wrap">
                 {{ form.body }}
-                <button class="send-btn" type="submit"><img class="" src="{% static '/img/send.png' %}"></button>
+                <input class="send-btn" type="image" src="{% static '/img/send.png' %}"/>
+
             </div>
         </form>
     </div>
