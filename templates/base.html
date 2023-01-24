@@ -19,5 +19,7 @@
         />
         <link rel="stylesheet" href="{% static 'main.css' %}" />
     </head>
-    {% block content %} {% endblock %}
+    <body onload="window.scrollTo(0,document.body.scrollHeight);">
+        {% block content %} {% endblock %}
+    </body>
 </html>

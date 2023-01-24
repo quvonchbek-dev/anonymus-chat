@@ -1,13 +1,6 @@
 {% extends "base.html" %} {% load static %} {% block title %}{{ section.title }}{% endblock %} {% block content %}
 <h2 align="center">ANONYMUS CHAT</h2>
 <div class="chat">
-    <form method="post">
-        {% csrf_token %}
-        <div class="form-outline">
-            {{ form.body }}
-            <button class="button" type="submit">Send</button>
-        </div>
-    </form>
     {% for message in messages %}
         <div class="container">    
             <div class="message">
@@ -17,10 +10,19 @@
             <form method="post">
                 {% csrf_token %}
                 <input type="hidden" name="id" value={{ message.id }}>
-                <button class="delete-btn" type="submit"><img src="{% static '/img/delete.jpg' %}"></button>
+                <button class="btn" type="submit"><img class="delete-btn" src="{% static '/img/delete.jpg' %}"></button>
             </form>
         </div>
     {% endfor %}
+    <div class="sticky">
+        <form method="post">
+            {% csrf_token %}
+            <div class="wrap">
+                {{ form.body }}
+                <button class="send-btn" type="submit"><img class="" src="{% static '/img/send.png' %}"></button>
+            </div>
+        </form>
+    </div>
 </div>
 
 {% endblock %}

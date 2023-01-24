@@ -18,5 +18,5 @@ def index(request):
         return redirect('/')
     else:
         form = MessageForm()
-    messages = Message.objects.all().order_by('-created_at')
+    messages = Message.objects.all().order_by('created_at')
     return render(request, 'index.html',{'form':form, "messages": messages})

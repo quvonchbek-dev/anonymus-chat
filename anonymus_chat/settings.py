@@ -111,7 +111,6 @@ STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    
 ]
 
 MEDIA_URL = "/media/"
@@ -121,22 +120,16 @@ MEDIA_FILES_DIRS = [
 ]
 
 QUILL_CONFIGS = {
-    'default':{
-        'theme': 'snow',
-        'modules': {
-            'syntax': True,
-            'toolbar': [
-                [
-                    {'font': []},
-                    {'header': ["header"]},
-                    {'align': []},
-                    'bold', 'italic', 'underline', 'strike', 'blockquote',
-                    {'color': ["red"]},
-                    {'background': []},
-                ],
-                ['code-block', 'link'],
-                ['clean'],
+    "default": {
+        "theme": "snow",
+        "modules": {
+            "toolbar": [
+                [{'header': [1, 2, False]}],
+                ["bold", "italic", "underline"],
+                ["image", "code-block"],
             ]
-        }
+        },
+        "placeholder": "Write your message...",
+        "theme": "snow",
     }
 }
