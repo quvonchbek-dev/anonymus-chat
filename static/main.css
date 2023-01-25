@@ -1,30 +1,31 @@
-.message {
-    background: #bee9e5;
-    width: 90%;
+.mmessage {
+    /* background: #000000; */
+    box-shadow: 2px 2px 2px 2px #00000025;
+    width: 100%;
     margin-bottom: 20px;
-    /* margin-left: 10px;
-    margin-right: 10px; */
     margin-bottom: 5px;
     border-radius: 20px;
     padding: 10px;
 }
 
-
-.chat {
-    padding-top: 10px;
-    background-color: #ffffff;
-    width: 100%;
-    min-width: 300px;
+.message {
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 25px;
+    width: 90%;
+    /* border-color: #E6E8EB; */
+    position: relative;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 4%);
+    margin-top: 10px;
+    background-color: #fff;
 }
-
-
 
 .time {
     text-align: right;
     margin-right: 20px;
 }
 
-.container {
+.my-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -49,7 +50,6 @@
     margin: auto;
 }
 
-
 .wrap {
     display: flex;
     justify-content: center;
@@ -65,13 +65,20 @@ html {
     align-items: center;
 }
 
-.sticky {
-    position: -webkit-sticky;
+.my-sticky {
     position: sticky;
-    bottom: 20px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    bottom: 0px;
+    min-width: 100%;
     border-radius: 10px;
+    margin-top: 10px;
     box-shadow: 4px 4px 4px 4px #00000025;
+    justify-content: center;
+}
+
+.footer {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    bottom: 20px;
 }

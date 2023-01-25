@@ -1,0 +1,269 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="LMS"/>
+        <meta name="keywords" content="admin,TUIT"/>
+        <meta name="author" content="stacks"/>
+        <meta name="csrf-token" content="7k2XnI5w9cBKfHoOfVhhuAo5Xg0oKoyhJqko3nBE"/>
+        <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- Title -->
+        <title>LMS</title>
+        {% comment %} My styles {% endcomment %}
+        <link rel="stylesheet" href="{% static 'main.css' %}" />
+        {% include 'django_quill/media.html' %}
+        <!-- Styles -->
+        <link rel="shortcut icon"
+              href="https://lms.tuit.uz/assets/images/favicon.ico"
+              type="image/x-icon"/>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon"
+              sizes="57x57"
+              href="https://lms.tuit.uz/assets/images/apple-touch-icon-57x57.png"/>
+        <link rel="apple-touch-icon"
+              sizes="72x72"
+              href="https://lms.tuit.uz/assets/images/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon"
+              sizes="76x76"
+              href="https://lms.tuit.uz/assets/images/apple-touch-icon-76x76.png"/>
+        <link rel="apple-touch-icon"
+              sizes="114x114"
+              href="https://lms.tuit.uz/assets/images/apple-touch-icon-114x114.png"/>
+        <link rel="apple-touch-icon"
+              sizes="120x120"
+              href="https://lms.tuit.uz/assets/images/apple-touch-icon-120x120.png"/>
+        <link rel="apple-touch-icon"
+              sizes="144x144"
+              href="https://lms.tuit.uz/assets/images/apple-touch-icon-144x144.png"/>
+        <link rel="apple-touch-icon"
+              sizes="152x152"
+              href="https://lms.tuit.uz/assets/images/apple-touch-icon-152x152.png"/>
+        <link rel="apple-touch-icon"
+              sizes="180x180"
+              href="https://lms.tuit.uz/assets/images/apple-touch-icon-180x180.png"/>
+        <link href="https://lms.tuit.uz/assets/plugins/bootstrap/css/bootstrap.min.css"
+              rel="stylesheet"/>
+        <link href="https://lms.tuit.uz/assets/plugins/font-awesome/css/font-awesome.min.css"
+              rel="stylesheet"/>
+        <link href="https://lms.tuit.uz/assets/plugins/icomoon/style.css"
+              rel="stylesheet"/>
+        <link href="https://lms.tuit.uz/assets/plugins/switchery/switchery.min.css"
+              rel="stylesheet"/>
+        <link href="https://lms.tuit.uz/assets/plugins/bootstrap-datepicker/css/datepicker3.css"
+              rel="stylesheet"/>
+        <link href="https://lms.tuit.uz/assets/plugins/bootstrap-datepicker/css/datepicker.css"
+              rel="stylesheet"/>
+        <link rel="stylesheet"
+              href="https://lms.tuit.uz/assets/css/select2.min.css"/>
+        <link rel="stylesheet"
+              href="https://lms.tuit.uz/assets/css/metisMenu.min.css"/>
+        <!-- Theme Styles -->
+        <link href="https://lms.tuit.uz/assets/css/space.css?v=1.4"
+              rel="stylesheet"/>
+        <link href="https://lms.tuit.uz/assets/css/custom.css?v=1.2"
+              rel="stylesheet"/>
+        <link href="https://lms.tuit.uz/assets/css/fonts.css" rel="stylesheet"/>
+        <link href="https://lms.tuit.uz/assets/css/toastify.min.css?v=1.0"
+              rel="stylesheet"
+              type="text/css"/>
+        <link href="https://lms.tuit.uz/assets/css/style.css?v=1.8"
+              rel="stylesheet"/>
+        <style>
+        @media (max-width: 768px) { .server-time-t4562h {width: 140px!important; font-size:11px!important; margin-top: -8px!important;} }
+        </style>
+    </head>
+    <body class="page-sidebar-fixed page-header-fixed">
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar">
+                <a class="logo-box" href="#">
+                    <div>
+                        <img src="https://lms.tuit.uz/assets/images/logo-md.png"
+                             alt=""
+                             height="40"
+                             width="40"/>
+                        <span>Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti</span>
+                    </div>
+                    <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"></i>
+                    <i class="icon-close" id="sidebar-toggle-button-close"></i>
+                </a>
+                <div class="page-sidebar-inner">
+                    <div class="page-sidebar-menu" id="sidebar-menu">
+                        <ul class="accordion-menu" id="side-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="menu-icon fa fa-dashboard"></i><span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="menu-divider"></li>
+                            <li>
+                                <div class="page-sidebar__title">Yakuniy</div>
+                                <li>
+                                    <a href="#">
+                                        <i class="menu-icon fa fa-book"></i>
+                                        <span>Patoklar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Sidebar -->
+                <!-- Page Content -->
+                <div class="page-content">
+                    <!-- Page Header -->
+                    <div class="page-header">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <div class="logo-sm">
+                                        <a href="#" id="sidebar-toggle-button">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                 width="24"
+                                                 height="24"
+                                                 viewBox="0 0 24 24"
+                                                 fill="none"
+                                                 stroke="currentColor"
+                                                 stroke-width="2"
+                                                 stroke-linecap="round"
+                                                 stroke-linejoin="round"
+                                                 class="feather feather-align-left">
+                                                <line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/>
+                                            </svg>
+                                        </a>
+                                        <a class="logo-box" href="#"></a>
+                                    </div>
+                                    <ul class="nav navbar-nav navbar-none">
+                                        <li>
+                                            <a href="#"
+                                               id="collapsed-sidebar-toggle-button"
+                                               style="padding-top: 18px;
+                                                      margin-left:0">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     width="26"
+                                                     height="26"
+                                                     viewBox="0 0 24 24"
+                                                     fill="none"
+                                                     stroke="currentColor"
+                                                     stroke-width="2"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     class="feather feather-align-left">
+                                                    <line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="dropdown">
+                                            <p href="#" class="text-right text-blue server-time">
+                                                <span>Server vaqti</span>
+                                                <br/>
+                                                <strong>26.01.2023 |  00:18</strong>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="text-blue"
+                                               href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     width="24"
+                                                     height="24"
+                                                     viewBox="0 0 24 24"
+                                                     fill="none"
+                                                     stroke="currentColor"
+                                                     stroke-width="1.5"
+                                                     stroke-linecap="round"
+                                                     stroke-linejoin="round"
+                                                     class="feather feather-video">
+                                                    <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#"
+                                               class="dropdown-toggle dropdown-float"
+                                               data-toggle="dropdown"
+                                               role="button"
+                                               aria-haspopup="true"
+                                               aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xmlns:svgjs="http://svgjs.com/svgjs"
+                                                     version="1.1"
+                                                     width="31"
+                                                     height="31"
+                                                     x="0"
+                                                     y="0"
+                                                     viewBox="0 0 460.8 460.8"
+                                                     style="enable-background:new 0 0 512 512"
+                                                     xml:space="preserve"
+                                                     class="">
+                                                    <g>
+                                                    <g xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                    <path d="M230.432,0c-65.829,0-119.641,53.812-119.641,119.641s53.812,119.641,119.641,119.641s119.641-53.812,119.641-119.641    S296.261,0,230.432,0z" fill="#1d2d5b" data-original="#000000" style="" class=""/>
+                                                    </g>
+                                                    </g>
+                                                    <g xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                    <path d="M435.755,334.89c-3.135-7.837-7.314-15.151-12.016-21.943c-24.033-35.527-61.126-59.037-102.922-64.784    c-5.224-0.522-10.971,0.522-15.151,3.657c-21.943,16.196-48.065,24.555-75.233,24.555s-53.29-8.359-75.233-24.555    c-4.18-3.135-9.927-4.702-15.151-3.657c-41.796,5.747-79.412,29.257-102.922,64.784c-4.702,6.792-8.882,14.629-12.016,21.943    c-1.567,3.135-1.045,6.792,0.522,9.927c4.18,7.314,9.404,14.629,14.106,20.898c7.314,9.927,15.151,18.808,24.033,27.167    c7.314,7.314,15.673,14.106,24.033,20.898c41.273,30.825,90.906,47.02,142.106,47.02s100.833-16.196,142.106-47.02    c8.359-6.269,16.718-13.584,24.033-20.898c8.359-8.359,16.718-17.241,24.033-27.167c5.224-6.792,9.927-13.584,14.106-20.898    C436.8,341.682,437.322,338.024,435.755,334.89z" fill="#1d2d5b" data-original="#000000" style="" class=""/>
+                                                    </g>
+                                                    </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-content">
+                                                <li>
+                                                    <div style="padding:13px 10px;
+                                                                background-color: rgba(29,45,91);
+                                                                color: #fff">Tester8 Tester8</div>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-cog"></i>Profil sozlamalari</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>Chiqish</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </div>
+                            <!-- /.container-fluid -->
+                        </nav>
+                    </div>
+                    <!-- /Page Header -->
+                    <!-- Page Inner -->
+                    <div class="page-inner">
+                        <body onload="window.scrollTo(0,document.body.scrollHeight);">
+                            {% block content %}{% endblock content %}
+                        </body>
+                    </div>
+                </div>
+                <!-- /Page Inner -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+        <!-- /Page Container -->
+        <!-- Javascripts -->
+        <script src="https://lms.tuit.uz/assets/plugins/jquery/jquery-3.1.0.min.js"></script>
+        <script src="https://lms.tuit.uz/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://lms.tuit.uz/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="https://lms.tuit.uz/assets/js/metisMenu.min.js"></script>
+        <script src="https://lms.tuit.uz/assets/plugins/switchery/switchery.min.js"></script>
+        <script src="https://lms.tuit.uz/assets/js/space.js"></script>
+        <script src="https://lms.tuit.uz/assets/js/toastify.min.js"></script>
+        <script src="https://lms.tuit.uz/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="https://lms.tuit.uz/assets/js/pages/form-elements.js"></script>
+        <script src="https://lms.tuit.uz/assets/js/select2.full.min.js"></script>
+        <script src="https://lms.tuit.uz/assets/js/mask.js"></script>
+        <script src="https://lms.tuit.uz/assets/js/main.js?v=1.0"></script>
+    </body>
+</html>

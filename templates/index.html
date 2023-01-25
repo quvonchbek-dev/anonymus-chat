@@ -1,29 +1,28 @@
-{% extends "base.html" %} {% load static %} {% block title %}{{ section.title }}{% endblock %} {% block content %}
-<h2 align="center">ANONYMUS CHAT</h2>
-<div class="chat">
-    {% for message in messages %}
-        <div class="container">    
-            <div class="message">
-                {{ message.body.html | safe }}
-                {{ message.get_time | safe }}
+{% extends "LMS.html" %}
+{% load static %}
+{% block content %}
+    <div class="chat">
+        {% for message in messages %}
+            <div class="my-container">
+                <div class="message">
+                    {{ message.body.html | safe }}
+                    {{ message.get_time | safe }}
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{ message.id }}"/>
+                    <input class="delete-btn" type="image" src="{% static '/img/delete.png' %}"/>
+                </form>
             </div>
+        {% endfor %}
+        <div class="my-sticky">
             <form method="post">
                 {% csrf_token %}
-                <input type="hidden" name="id" value={{ message.id }}>
-                <input class="delete-btn" type="image" src="{% static '/img/delete.png' %}"/>
+                <div class="wrap">
+                    {{ form.body }}
+                    <input class="send-btn" type="image" src="{% static '/img/send.png' %}"/>
+                </div>
             </form>
         </div>
-    {% endfor %}
-    <div class="sticky">
-        <form method="post">
-            {% csrf_token %}
-            <div class="wrap">
-                {{ form.body }}
-                <input class="send-btn" type="image" src="{% static '/img/send.png' %}"/>
-
-            </div>
-        </form>
     </div>
-</div>
-
-{% endblock %}
+{% endblock content %}
