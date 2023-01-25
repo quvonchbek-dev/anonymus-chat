@@ -75,7 +75,8 @@
         @media (max-width: 768px) { .server-time-t4562h {width: 140px!important; font-size:11px!important; margin-top: -8px!important;} }
         </style>
     </head>
-    <body class="page-sidebar-fixed page-header-fixed">
+    <body class="page-sidebar-fixed page-header-fixed"
+          onload="window.scrollTo(0,document.body.scrollHeight);">
         <!-- Page Container -->
         <div class="page-container">
             <!-- Page Sidebar -->
@@ -168,8 +169,7 @@
                                             </p>
                                         </li>
                                         <li>
-                                            <a class="text-blue"
-                                               href="#">
+                                            <a class="text-blue" href="#">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                      width="24"
                                                      height="24"
@@ -241,10 +241,9 @@
                     </div>
                     <!-- /Page Header -->
                     <!-- Page Inner -->
-                    <div class="page-inner">
-                        <body onload="window.scrollTo(0,document.body.scrollHeight);">
-                            {% block content %}{% endblock content %}
-                        </body>
+                    <div class="my-page-inner">
+                        {% block content %}
+                        {% endblock content %}
                     </div>
                 </div>
                 <!-- /Page Inner -->

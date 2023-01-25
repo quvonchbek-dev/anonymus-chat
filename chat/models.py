@@ -4,7 +4,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import re
 class Message(models.Model):
-    body = QuillField(default="")
+    body = QuillField(null=True)
     created_at = models.DateTimeField(default=datetime.now)
 
     def __str__(self):

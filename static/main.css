@@ -33,6 +33,13 @@
     justify-content: center;
 }
 
+.my-page-inner {
+    position: relative;
+    min-height: calc(100% - 81px);
+    padding: 45px 0px 0px 0px;
+    background: #f1f5f8;
+}
+
 .django-quill-widget-container {
     width: 100%;
     height: 100%;
@@ -47,7 +54,6 @@
 .send-btn {
     max-width: 100%;
     height: 100%;
-    margin: auto;
 }
 
 .wrap {
@@ -55,6 +61,7 @@
     justify-content: center;
     padding: 0px;
     background-color: #ffffff;
+    align-items: center;
 }
 
 img {
@@ -68,7 +75,7 @@ html {
 .my-sticky {
     position: sticky;
     bottom: 0px;
-    min-width: 100%;
+    width: 100%;
     border-radius: 10px;
     margin-top: 10px;
     box-shadow: 4px 4px 4px 4px #00000025;
