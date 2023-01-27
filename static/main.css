@@ -33,13 +33,6 @@
     justify-content: center;
 }
 
-.my-page-inner {
-    position: relative;
-    min-height: calc(100% - 81px);
-    padding: 45px 0px 0px 0px;
-    background: #f1f5f8;
-}
-
 .django-quill-widget-container {
     width: 100%;
     height: 100%;

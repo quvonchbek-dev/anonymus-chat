@@ -14,7 +14,10 @@
         <title>LMS</title>
         {% comment %} My styles {% endcomment %}
         <link rel="stylesheet" href="{% static 'main.css' %}" />
+        <link rel="stylesheet" href="{% static 'page_inner.css' %}" />
         {% include 'django_quill/media.html' %}
+        
+
         <!-- Styles -->
         <link rel="shortcut icon"
               href="https://lms.tuit.uz/assets/images/favicon.ico"
@@ -90,7 +93,7 @@
                         <span>Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti</span>
                     </div>
                     <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"></i>
-                    <i class="icon-close" id="sidebar-toggle-button-close"></i>
+                    <i class="menu-icon fa fa-close" id="sidebar-toggle-button-close"></i>
                 </a>
                 <div class="page-sidebar-inner">
                     <div class="page-sidebar-menu" id="sidebar-menu">
@@ -105,7 +108,7 @@
                                 <div class="page-sidebar__title">Yakuniy</div>
                                 <li>
                                     <a href="#">
-                                        <i class="menu-icon fa fa-book"></i>
+                                        <i class="menu-icon fa fa-list"></i>
                                         <span>Patoklar</span>
                                     </a>
                                 </li>
@@ -241,9 +244,11 @@
                     </div>
                     <!-- /Page Header -->
                     <!-- Page Inner -->
-                    <div class="my-page-inner">
-                        {% block content %}
-                        {% endblock content %}
+                    <div>
+                        <div class="my-page-inner">
+                            {% block content %}
+                            {% endblock content %}
+                        </div>
                     </div>
                 </div>
                 <!-- /Page Inner -->
@@ -264,5 +269,6 @@
         <script src="https://lms.tuit.uz/assets/js/select2.full.min.js"></script>
         <script src="https://lms.tuit.uz/assets/js/mask.js"></script>
         <script src="https://lms.tuit.uz/assets/js/main.js?v=1.0"></script>
+        <script src="https://kit.fontawesome.com/7157db1cbb.js" crossorigin="anonymous"></script>
     </body>
 </html>
