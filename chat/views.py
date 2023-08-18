@@ -5,8 +5,6 @@ from django.http import HttpResponseRedirect
 
 
 def index(request):
-
-    form = None
     if request.method == "POST":
         form = MessageForm(request.POST)
         print()
@@ -19,4 +17,4 @@ def index(request):
     else:
         form = MessageForm()
     messages = Message.objects.all().order_by('created_at')
-    return render(request, 'index.html',{'form':form, "messages": messages})
+    return render(request, 'index.html', {'form': form, "messages": messages})
