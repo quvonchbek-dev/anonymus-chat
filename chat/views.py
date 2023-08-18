@@ -7,12 +7,14 @@ from django.http import HttpResponseRedirect
 def index(request):
     if request.method == "POST":
         form = MessageForm(request.POST)
-        print()
         if form.is_valid() and "body=" in str(request.read()):
-            form.save()
+            try:
+                form.save()
+            except Exception:
+                ...
             return HttpResponseRedirect('/')
-        message = get_object_or_404(Message, pk=request.POST.__getitem__("id"))
-        message.delete()
+        # message = get_object_or_404(Message, pk=request.POST.__getitem__("id"))
+        # message.delete()
         return redirect('/')
     else:
         form = MessageForm()

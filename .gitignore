@@ -1,4 +1,7 @@
 .idea/
+static/admin/
+static/ckeditor/
+static/django_quill/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
